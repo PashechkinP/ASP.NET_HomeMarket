@@ -14,13 +14,19 @@
         }
         else
         {
-            <a asp-page="Login">Войти</a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12"><a asp-page="Login">Войти</a></div>
+                    <div class="col-12"><a asp-page="CreateHome">Добавить дом</a></div>
+                    <div class="col-12"><a asp-page="AdminPanel">Панель управления</a></div>
+                    <div class="col-12"><a asp-page="Registration" class="btn btn-primary">Зарегиться</a></div>
+                    <div class="col-12"><a href="/logout">Выйти</a></div>
+                </div>
+            </div>
         }
     }
 </p>
-<a asp-page="CreateHome">Добавить дом</a><br />
-<a asp-page="AdminPanel">Панель управления</a>
-<a href="/logout">Выйти</a>
+
 <div class="homes-grid">
     @foreach (Home home in Model.allHomes)
     {     
