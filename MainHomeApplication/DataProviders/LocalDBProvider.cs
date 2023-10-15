@@ -16,6 +16,13 @@ namespace MainHomeApplication.DataProviders
             return home;
         }
 
+        ServiceUser IHomeDataProvider.createUser(ServiceUser userochek)
+        {
+            this._context.ServiceUsers.Add(userochek);
+            this._context.SaveChanges();
+            return userochek;
+        }
+
         void IHomeDataProvider.deleteHome(int homeId)
         {
             Home? dbHome =  this._context.Homes.Find(homeId);

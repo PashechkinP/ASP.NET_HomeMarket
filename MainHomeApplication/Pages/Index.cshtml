@@ -4,9 +4,12 @@
 @model MainHomeApplication.Pages.IndexModel;
 
 @using System.Security.Claims;
-<h1>Home Market</h1>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">      
+            <span class="fs-4">Home market</span>
+    </header>
+</div>
 <p>
-    Текущий пользователь:
     @{
         if (PageContext.HttpContext.User.Identity.IsAuthenticated){
 
@@ -16,11 +19,13 @@
         {
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12"><a asp-page="Login">Войти</a></div>
-                    <div class="col-12"><a asp-page="CreateHome">Добавить дом</a></div>
-                    <div class="col-12"><a asp-page="AdminPanel">Панель управления</a></div>
-                    <div class="col-12"><a asp-page="Registration" class="btn btn-primary">Зарегиться</a></div>
-                    <div class="col-12"><a href="/logout">Выйти</a></div>
+                    <div class="col-12 text-center"><p>Current user :  ^_^</p></div>
+                    <div class="col-12 text-center"><a asp-page="Login">Войти</a></div>
+                    <div class="col-12 text-center"><a asp-page="CreateHome">Добавить дом</a></div>
+                    <div class="col-12 text-center"><a asp-page="AdminPanel">Панель управления</a></div>
+                    <div class="col-12 text-center"><p></p></div>
+                    <div class="col-12 text-center"><a asp-page="Registration" class="btn btn-primary">Зарегиться</a></div>
+                    <div class="col-12 text-center"><a href="/logout">Выйти</a></div>
                 </div>
             </div>
         }

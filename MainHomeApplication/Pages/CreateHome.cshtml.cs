@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MainHomeApplication;
-using Microsoft.AspNetCore.Authorization;
-using MainHomeApplication.Models;
 
 namespace MainHomeApplication.Pages
 {
@@ -10,6 +7,7 @@ namespace MainHomeApplication.Pages
     public class CreateHomeModel : PageModel
     {
         IHomeDataProvider _homeDataProvider;
+
         [BindProperty]
         public Home NewHome { get; set; } = new();
 

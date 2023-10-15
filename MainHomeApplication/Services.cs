@@ -41,6 +41,8 @@ namespace MainHomeApplication
         public Home? updateHome(Home home);
         public void deleteHome(int homeId);
         public Home createHome(Home home);
+
+        public ServiceUser createUser(ServiceUser userochek);
     }
 
 }
